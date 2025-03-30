@@ -1,7 +1,9 @@
-
 # Tauri + React + Typescript App
 
 A lightweight desktop app built with Tauri to quickly translate PDF files into different languages.
+
+![App Screenshot](app-img.png)
+
 
 ## Prerequisites
 
@@ -11,7 +13,7 @@ Before you begin, make sure you have the following installed:
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Cargo](https://doc.rust-lang.org/cargo/)
 - [Tauri CLI](https://tauri.app/v1/guides/getting-started/intro#install-tauri-cli)
-- [npm](https://www.npmjs.com/) (or [yarn](https://yarnpkg.com/))
+- [pnpm](https://pnpm.io/) (or [yarn](https://yarnpkg.com/))
 
 ## Getting Started
 
@@ -24,8 +26,8 @@ Clone the repository and install the necessary dependencies.
 git clone https://github.com/nathacks/tauri-pdf-translate-app
 cd tauri-pdf-translate-app
 
-# Install frontend dependencies
-npm install
+# Install frontend dependencies with pnpm
+pnpm install
 ```
 
 ### 2. Install Rust Dependencies
@@ -46,10 +48,10 @@ To start the development server for React and Tauri:
 
 ```bash
 # Start the React frontend
-npm run dev
+pnpm run dev
 
 # In another terminal, run the Tauri app
-npm run tauri dev
+pnpm run tauri dev
 ```
 
 The app will open in a native window with React running as the frontend and Rust handling the backend.
@@ -60,10 +62,10 @@ Once you're ready to package your app for production:
 
 ```bash
 # Build the React app
-npm run build
+pnpm run build
 
 # Package the app with Tauri
-npm run tauri build
+pnpm run tauri build
 ```
 
 This will generate a production-ready binary for your platform.
