@@ -6,14 +6,14 @@ use tauri::{
 use tauri_plugin_positioner::WindowExt;
 
 pub fn init_macos_menu_extra<R: Runtime>(app: &tauri::AppHandle<R>) -> tauri::Result<()> {
-    let main_window = app.get_window("main").unwrap();
-    let window_clone = main_window.clone();
-
-    main_window.on_window_event(move |event| {
-        if let tauri::WindowEvent::Focused(false) = event {
-            let _ = window_clone.hide();
-        }
-    });
+    // let main_window = app.get_window("main").unwrap();
+    // let window_clone = main_window.clone();
+    //
+    // main_window.on_window_event(move |event| {
+    //     if let tauri::WindowEvent::Focused(false) = event {
+    //         let _ = window_clone.hide();
+    //     }
+    // });
 
     let quit_i = MenuItem::with_id(app, "quit", "Quit", true, None::<&str>)?;
     let menu = Menu::with_items(app, &[&quit_i])?;
