@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "tailwindcss-radix-colors/dist/all.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        padding: 4px;
+    }
+
+    #root {
+        height: 100%;
+        display: flex;
+        border-radius: 6px;
+        padding: 16px;
+
+        @apply bg-sand-2
+    }
+
+}
+
